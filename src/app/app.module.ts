@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import {Router} from '@angular/router';
 import {AppComponent} from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Router, RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule
   ],
   declarations: [
     AppComponent
@@ -21,8 +24,5 @@ import { AppRoutingModule } from './app-routing.module';
 })
 
 export class AppModule {
-  // Diagnostic only: inspect router configuration
-  constructor(router: Router) {
-    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
-  }
+
 }
